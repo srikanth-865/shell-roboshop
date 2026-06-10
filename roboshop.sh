@@ -1,5 +1,4 @@
 #!/bin/bash
-
 AMI_ID="ami-0220d79f3f480ecf5"
 ZONE_ID="Z0127358DAMWNM9GTWB4" # replace with your zone ID
 DOMAIN_NAME="srikanth865.online" # replace with your domain name
