@@ -3,4 +3,4 @@
 echo  "Its my new repo creation"
 
 date=(date)
-echo " Today $date is "\e[31msrikanth"
+echo -e  "\e[31m srikanth" 
