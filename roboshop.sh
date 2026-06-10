@@ -1,8 +1,8 @@
 #!/bin/bash
 
 AMI_ID="ami-0220d79f3f480ecf5"
-ZONE_ID="Z0127358DAMWNM9GTWB4" # replace with your zone ID
-DOMAIN_NAME="srikanth865.online" # replace with your domain name
+ZONE_ID="Z07086101C1CVP7AT2UK4" # replace with your zone ID
+DOMAIN_NAME="daws90s.shop" # replace with your domain name
 
 for instance in $@
 do
@@ -14,7 +14,7 @@ do
         --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=roboshop-$instance}]" \
         --query 'Instances[0].InstanceId' \
         --output text
-        )
+    )
     echo "Instance ID: $INSTANCE_ID"
 
     if [ $instance == "frontend" ]; then
