@@ -16,8 +16,7 @@ do
         --output text
     )
     echo "Instance ID: $INSTANCE_ID"
-
-    if [ "$instance" == "frontend" ]; then
+    if [ $instance == "frontend" ]; then
         IP=$(aws ec2 describe-instances --instance-ids $INSTANCE_ID \
          --query 'Reservations[*].Instances[*].PublicIpAddress' \
          --output text
@@ -30,8 +29,7 @@ do
         )
         R53_RECORD="$instance.$DOMAIN_NAME"
     fi
-    
-    #### Updating R53 Record ####
+     #### Updating R53 Record ####
     aws route53 change-resource-record-sets \
     --hosted-zone-id $ZONE_ID \
     --change-batch '
